@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Money Master</title>
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;600;700&display=swap" rel="stylesheet">
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script>
+        tailwind.config = {
+          theme: {
+            extend: {
+              colors: {
+                clifford: '#da373d',
+              },
+               fontFamily : {
+               mons: ['Montserrat', ' sans-serif'],
+              },
+            }
+          }
+        }
+      </script>
+</head>
+<body class="font-mons my-12 mx-6 md:mx-12">
+    <header><h1 class="text-5xl font-bold text-cyan-500 text-center">Money Master💰</h1></header>
+    <main>
+        <div class="grid grid-cols-1 md:grid-cols-2 gap-6 mt-10 ">
+            <div class="col">
+                <img class="rounded-2xl" src="images/money-cage.jpg" alt="">
+            </div>
+            <div class="col text-center shadow-2xl rounded-2xl">
+              <div class="bg-slate-100 p-14 rounded-2xl">
+                <div class="income ">
+                  <h2 class="text-2xl font-medium">Your Income</h2>
+                  <p class="inline-block mr-3 my-8">Income: <input id="income" class="ml-5 focus:outline-0 bg-slate-300 rounded-sm p-1"  type="text"></p>
+                </div>
+                <div class="expenses ">
+                  <h2 class="text-2xl font-medium ">Your Expenses</h2>
+                  <p class=" mt-8 mb-5">Food: <input id="food" class="focus:outline-0 ml-5 bg-slate-300 rounded-sm p-1"  type="text"></p>
+                  <p class="inline-block mb-5">Rent: <input id="rent" class="focus:outline-0 ml-5 bg-slate-300 rounded-sm p-1"  type="text"></p>
+                  <p class="inline-block  mb-5">Clothes: <input id="clothes" class="focus:outline-0 ml-4 bg-slate-300 rounded-sm p-1"  type="text"></p>
+                  <p class="inline-block  mb-5">Others: <input id="others" class="focus:outline-0 ml-4 bg-slate-300 rounded-sm p-1"  type="text"></p>
+                  <button id="calculate" class="px-8 py-3 text-white font-bold bg-blue-700 hover:bg-blue-500 rounded block mt-2 mx-auto" >Calculate</button>
+                  <p class="text-2xl font-medium my-6">Total Expenses: <span id="total-expenses">00</span></p>
+                  <p class="text-2xl font-medium ">Balance: <span id="balance">00</span></p>
+                </div>
+                <div class="saving">
+                  <p class="text-lg font-semibold mt-8 mb-5">Save<input id="saving-input" class="focus:outline-0 ml-5 mr-2 w-12 bg-slate-300 rounded-sm" type="text"> &percnt;  <button id="saving-btn" class="px-8 py-2 text-base text-white font-bold bg-blue-700 hover:bg-blue-500 rounded ml-2 mt-6" >Save</button></p>
+
+                  <h3 class="text-2xl font-medium ">Saving Amount: <span id="saving-element">00</span></h3>
+                  <h3 class="text-2xl font-medium ">Remaining  Balance: <span id="remaining-balance">00</span></h3>
+                </div>
+              </div>
+            </div>
+        </div>
+    </main>
+    <footer></footer>    
+
+    <!-- js file link -->
+    <script src="js/money-calculate.js"></script>
+</body>
+</html>
